@@ -4,14 +4,18 @@ import './index.css';
 import App from './App';
 import {BrowserRouter as Router
 } from 'react-router-dom';
+import {ProductProvider} from './context';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    
+    <ProductProvider>
     // Parent router to be accessed by all apps and components. From app.js
-    <Router>
-        <App />  
-    </Router>
+        <Router>
+            <App />  
+        </Router>
+
+    </ProductProvider>
+    
 
 , document.getElementById('root'));
 
